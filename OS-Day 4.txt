@@ -1,0 +1,78 @@
+1-Process
+to get process
+	ps
+	ps -f
+	ps -e
+to send signal to process
+	kill <Process ID>
+	kill 3111
+---Scenario
+Open two terminals
+
+1-	from 1st terminal : ps -ef, and get the PID
+	from 2nd terminal: send terminate signal to the previous PID
+2-	from 1st termina: execute vi
+	from 2nd terminal: ps -ef and get the vi PID
+			send terminate signal to the previous PID 
+2-Jobs
+	Open terminal
+		execute vi asdasd &
+		jobs
+		fg
+		ctrl-z
+		kill %JOB for vi
+		jobs
+		kill -9 %JOB for vi
+		jobs
+3-top
+------------------------
+-Systemd
+	systemctl <op> <service>
+	sudo systemctl status apache2
+	sudo systemctl stop apache2
+	sudo systemctl start apache2
+sudo vi /etc/apache2/sites-enabled/000-default.conf, and remove the word VirtualHost
+	sudo systemctl restart apache2
+systemd => units
+		service : listen on socket
+			apache2.service
+			mariadb.service
+		timer
+		path
+---------------------------------------
+1-My current PC : marwanlab:marwan
+		ssh 10.1.1.2
+		ssh yehia@10.1.1.2
+	Conenct : yehialab: 10.1.1.2
+1-Install ssh
+	sudo apt install openssh-server
+	sudo systemctl disable ssh
+	sudo systemctl start ssh
+	1-Connect remotely to your friend
+		To end : CTRL-D
+	2-Execute only remote command, and comment
+	3-Copy file from your local disk to your friend laptop
+	4-Login remotely without password
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS: 3111
